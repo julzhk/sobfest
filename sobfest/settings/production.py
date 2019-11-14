@@ -9,7 +9,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = True
 
 try:
-    from .local import *
+    from .base import *
 except ImportError:
     pass
 DATABASES = {
