@@ -1,1 +1,1 @@
-web: gunicorn sobfest.wsgi --log-file -
+web: gunicorn sobfest.sobfest.wsgi --log-file -
