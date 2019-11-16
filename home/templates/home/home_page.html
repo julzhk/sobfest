@@ -1,21 +1,46 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends 'base.html' %}
+{% load static i18n wagtailcore_tags wagtailimages_tags puput_tags social_share %}
+{% load wagtailuserbar %}
+{#{% load menu_tags %}#}
+{#{% load render_bundle from webpack_loader %}#}
 
-{% block body_class %}template-homepage{% endblock %}
+{#{% block simple-content-header %}{{ page.title|richtext }}{% endblock %}#}
 
-{% block extra_css %}
 
-{% comment %}
-Delete the line below if you're just getting started and want to remove the welcome screen!
-{% endcomment %}
-<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
-{% endblock extra_css %}
+{#{% block menu-header %}#}
+{#    {% flat_menu 'footer' template="cms/menus/sub_menu.html" apply_active_classes=True %}#}
+{#{% endblock menu-header %}#}
 
 {% block content %}
-
-{% comment %}
-Delete the line below if you're just getting started and want to remove the welcome screen!
-{% endcomment %}
-{% include 'home/welcome_page.html' %}
-
+    {% with blocks=self.body %}
+        {% for block in blocks %}
+            {% if block.block_type == 'heading' %}
+                <div class="fourteen wide column">
+                    <h2>{{ block.value }}</h2>
+                </div>
+            {% else %}
+                {% include_block block %}
+            {% endif %}
+        {% endfor %}
+    {% endwith %}
 {% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
