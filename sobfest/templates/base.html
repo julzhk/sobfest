@@ -1,4 +1,6 @@
 {% load static wagtailuserbar %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+{% load wagtailuserbar %}
 
 <!DOCTYPE html>
 <html>
@@ -149,8 +151,8 @@
         <a class="active item">Home</a> <a class="item">Work</a>
         <a class="item">Company</a> <a class="item">Careers</a>
         <div class="right menu">
-            <div class="item"><a class="ui button">Log in</a></div>
-            <div class="item"><a class="ui primary button">Sign Up</a></div>
+{#            <div class="item"><a class="ui button">Log in</a></div>#}
+{#            <div class="item"><a class="ui primary button">Sign Up</a></div>#}
         </div>
     </div>
 </div>
@@ -185,157 +187,8 @@
         </div>
     </div>
     <div class="ui vertical stripe segment">
-        <div class="ui middle aligned stackable grid container">
-            <div class="row">
-                <div class="eight wide column">
-                    <h3 class="ui header">
-                        Announcing The First UK Recovery Film Festival
-                    </h3>
-                    <p>
-                        September 2020, International Recovery Month, sees the launch of the first ever
-                        UK Recovery Film Festival in London. This inaugural British Cultural Event will be
-                        a celebration of recovery from addiction, mental ill health and trauma through
-                        film. Our first year will champion young people and aims to address the mental
-                        health crisis facing this vulnerable population.
-                    </p>
-                    <p>
-                        Held over three days in a stylish independent cinema, it will kick off with a launch
-                        party on Friday, followed by our gala screening. The next two days, will be jam-packed
-                        with the an eclectic and exciting mix of cutting
-                        edge features, shorts, and documentariess from around the world - most of which will not have
-                        been shown in Britain.
-                    </p>
-                    <p>
-                        The highlight of the festival will be the screening of the winners
-                        in our UK youth filmmaker's competition for ages 16-26. These original and
-                        unique films will raise awareness of and experiences of addiction and associated
-                        disorders in their community. Along with these new insightful films we will put in
-                        some old classics with a spin.
-                    </p>
-                    <p>
-                        Addiction, metal ill health and trauma are interlinked, and can begin at a young
-                        age and follow a chronic path. We seek to arrest the development of these
-                        health issues by early education and awareness arising. Highlighting that
-                        recovery is possible by showing films that demonstrate this and working with
-                        people who are all in recovery and thriving.
-
-                        We want young people from around the country to get involved and have their
-                        say about these issues which are effecting them, their friends, family and
-                        community. </p>
-                    <p>
-                        After the films we will be holding Q&amp;A’s with the young winners, professional
-                        filmmaker’s, directors and addiction, mental ill health and trauma luminaries from
-                        around Britain. And a few celebs for good measure.
-                    </p>
-                    <p>
-                        Join us to celebrate at this unique, youth orientated, cultural event. That aims to
-                        show that recovery is possible through film and bring together the community
-                        around the country who are seeking help, want to learn more, work in the sector
-                        and want to be part of the movement towards creating social change and
-                        destigmatisation.
-                    </p>
-                </div>
-                <div class="six wide right floated column">
-                    <img
-                            class="ui large bordered rounded image"
-                            src="./static/images/Tom.HIGS.jpg"
-                    />
-                </div>
-            </div>
-            <div class="row">
-                <div class="center aligned column">
-                    <a class="ui huge button">Enter now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ui vertical stripe quote segment">
-        <div class="ui equal width stackable internally celled grid">
-            <div class="center aligned row">
-                <div class="column">
-                    <h3 class="ui header">Young Filmmaker's Competition</h3>
-                    <p>
-                        We will be asking for original film and documentary submissions on the themes
-                        of recovery, addiction, mental ill health and trauma. Prioritising entries from
-                        young people, age of 16-26. They can be first time filmmakers without
-                        experience, emerging talent, students, it open to all. We actively encourage
-                        applicants from those with disabilities, BAME, LGBT and other diverse groups.
-                        We are looking for shorts, features and animations. These can be shot on any
-                        format including smart phone. We will be posting a short film on the website
-                        explaining how to make a film with a mobile phone. The films will be judged by
-                        their content and ideas rather than technical brilliance to ensure inclusivity.
-                    </p>
-                </div>
-                <div class="column">
-
-                    <h3 class="ui header">Call For Worldwide Submissions</h3>
-                    <p>
-                        We will also be asking for UK and International submissions from filmmakers
-                        over the age of 26 which educate, inform and promote well being and
-                        understanding of our themes.
-                    </p>
-                    <p>
-                        The UK Recovery Film Festival will receive submissions through the Film
-                        Freeway Portal. A donation of £10 per entry for filmmakers over the age of
-                        26/and or professionals will be put towards the festival costs.
-                    </p>
-                    <p>
-                        A panel of judges from the world of film and media, who have personal
-                        experience of our themes and who are in recovery, will be appointed to assess
-                        the entries.
-                    </p>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="ui vertical stripe segment">
-        <div class="ui text container">
-            <h3 class="ui header">
-                Sponsorship and Donors
-            </h3>
-            <p>
-                We are looking for sponsors who want to become involved in this event, who
-                have a passion for creating change and highlighting the crucial need for young
-                people’s addiction and mental health treatment, as well as the wider population.
-            </p>
-
-            <p>
-                Donors may wish to contribute by sponsoring a film. Or by sharing expertise or
-                time to support the event. Could you help us reach every part of the UK and its
-                young people through your marketing and social media? Could you provide
-                regional support to help young people make their films?
-
-
-            <h3 class="ui header">Ticket sponsorship</h3>
-            <p>
-                We want to provide free tickets for young people aged 16-26, and to offer travel
-                bursaries, could your organisation donate funds towards this goal? Maybe your
-                organisation could offer a funded place on a film training scheme for our young
-                competition winners?
-            </p>          <a class="ui large button">Read More</a>
-
-
-        </div>
-    </div>
-    <div class="ui equal width stackable internally celled grid">
-        <div class="center aligned row">
-
-            <div class="six wide right floated column">
-                <img
-                        class="ui small bordered rounded image"
-                        src="./static/images/IMG_5907.jpg"
-                />
-            </div>
-            <div class="six wide right floated column">
-                <img
-                        class="ui medium bordered rounded image"
-                        src="./static/images/IMG_7463.JPG"
-                />
-            </div>
-        </div>
+            {% block content %}
+            {% endblock content %}
     </div>
     <div class="ui inverted vertical footer segment">
         <div class="ui container">

@@ -1,0 +1,28 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+<div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+        <div class="center aligned row">
+            <div class="column">
+                {% for block in self.left_column %}
+                    {% if block.block_type == 'heading' %}
+                        <h2>{{ block.value }}</h2>
+                    {% else %}
+                        {% include_block block %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="column">
+                {% for block in self.right_column %}
+                    {% if block.block_type == 'heading' %}
+                        <h2>{{ block.value }}</h2>
+                    {% else %}
+                        {% include_block block %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
