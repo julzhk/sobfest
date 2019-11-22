@@ -1,6 +1,6 @@
 {% load static wagtailuserbar %}
 {% load static wagtailcore_tags wagtailimages_tags %}
-{% load wagtailuserbar %}
+{% load menu_tags %}
 
 <!DOCTYPE html>
 <html>
@@ -22,10 +22,13 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
             type="text/css"
     />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:400|Montserrat:700&display=swap" rel="stylesheet">
     <style type="text/css">
         body {
             -webkit-font-smoothing: antialiased;
             -moz-font-smoothing: grayscale;
+            font-family: 'Roboto Condensed', sans-serif;
         }
 
         .hidden.menu {
@@ -56,6 +59,7 @@
             margin-bottom: 0em;
             font-size: 8em;
             font-weight: bold;
+            font-family: 'Kanit', sans-serif;
             background: -webkit-linear-gradient(#eee, #993333);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -68,8 +72,9 @@
             font-weight: bold;
             background: -webkit-linear-gradient(#ccc, #eee);
             -webkit-background-clip: text;
+            font-family: 'Kanit', sans-serif;
             -webkit-text-fill-color: transparent;
-            text-shadow: 1px 1px 2px #ddd, 0 0 0.2em #fff;
+            text-shadow: 1px 1px 1px #ddd, 0 0 0.2em #333;
         }
 
         .ui.vertical.stripe {
@@ -158,9 +163,9 @@
 </div>
 <!--Sidebar Menu-->
 <div class="ui vertical inverted sidebar menu">
-    <a class="active item">Home</a> <a class="item">Work</a>
-    <a class="item">Company</a> <a class="item">Careers</a>
-    <a class="item">Login</a> <a class="item">Signup</a>
+{#    <a class="active item">Home</a> <a class="item">Work</a>#}
+{#    <a class="item">Company</a> <a class="item">Careers</a>#}
+{#    <a class="item">Login</a> <a class="item">Signup</a>#}
 </div>
 <!--Page Contents-->
 <div class="pusher">
@@ -168,13 +173,11 @@
         <div class="ui container">
             <div class="ui large secondary inverted pointing menu">
                 <a class="toc item"><i class="sidebar icon"></i></a>
-                <a class="active item">Home</a>
-                <a class="item">Blog</a>
-                <a class="item">Attend</a>
-                <a class="item">Enter</a>
+                {% main_menu max_levels=1 %}
                 <div class="right item">
 {#                    <a class="ui inverted button">Log in</a>#}
 {#                    <a class="ui inverted button">Sign Up</a>#}
+                {% flat_menu 'right' max_levels=1  %}
                 </div>
             </div>
         </div>
@@ -187,33 +190,33 @@
             {% block content %}
             {% endblock content %}
     </div>
-    <div class="ui inverted vertical footer segment">
+    <div class="ui hidden inverted vertical footer segment">
         <div class="ui container">
             <div
                     class="ui stackable inverted divided equal height stackable grid" >
                 <div class="three wide column">
-                    <h4 class="ui inverted header">About</h4>
+{#                    <h4 class="ui inverted header">About</h4>#}
                     <div class="ui inverted link list">
-                        <a class="item" href="#root">Sitemap</a>
-                        <a class="item" href="#root">Contact Us</a>
-                        <a class="item" href="#root"> Ceremonies</a>
-                        <a class="item" href="#root"> Plans</a>
+{#                        <a class="item" href="#root">Sitemap</a>#}
+{#                        <a class="item" href="#root">Contact Us</a>#}
+{#                        <a class="item" href="#root"> Ceremonies</a>#}
+{#                        <a class="item" href="#root"> Plans</a>#}
                     </div>
                 </div>
                 <div class="three wide column">
-                    <h4 class="ui inverted header">Services</h4>
+{#                    <h4 class="ui inverted header">Services</h4>#}
                     <div class="ui inverted link list">
-                        <a class="item" href="#root"> Pre-Order</a>
-                        <a class="item" href="#root">FAQ</a>
-                        <a class="item" href="#root">How To Access</a>
-                        <a class="item" href="#root">Favorites</a>
+{#                        <a class="item" href="#root"> Pre-Order</a>#}
+{#                        <a class="item" href="#root">FAQ</a>#}
+{#                        <a class="item" href="#root">How To Access</a>#}
+{#                        <a class="item" href="#root">Favorites</a>#}
                     </div>
                 </div>
                 <div class="seven wide column">
-                    <h4 class="ui inverted header">Footer Header</h4>
+{#                    <h4 class="ui inverted header">Footer Header</h4>#}
                     <p>
-                        Nunquam prensionem domina. Grandis, bi-color fidess etiam fallere de flavum, barbatus rector.
-                        cur domina ridetis. </p>
+{#                        Nunquam prensionem domina. Grandis, bi-color fidess etiam fallere de flavum, barbatus rector.#}
+{#                        cur domina ridetis. </p>#}
                 </div>
             </div>
         </div>

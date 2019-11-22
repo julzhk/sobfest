@@ -1,0 +1,9 @@
+{% load menu_tags %}
+
+{% for item in menu_items %}
+    <a href="{{ item.href }}"
+       class="{{ item.active_class }} item"
+       id="ddtoggle_{{ item.link_page.pk }}">
+            {{ item.text }}
+    </a>
+{% endfor %}

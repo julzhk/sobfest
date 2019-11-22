@@ -1,0 +1,11 @@
+{#{{ menu_instance.heading }}#}
+{#{{ menu_instance.title }}#}
+{% for item in menu_items %}
+    <a class="item {{ item.active_class }}" href={{ item.href }}
+            title="{{ item.title }}">
+        {% if item.handle %}
+            <i class="{{ item.handle }} icon"></i>
+        {% endif %}
+        <span>{{ item.text }}</span>
+    </a>
+{% endfor %}
