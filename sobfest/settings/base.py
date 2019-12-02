@@ -151,7 +151,7 @@ STATICFILES_FINDERS = [
 STATICFILES_DIRS = [
     os.path.join(PROJECT_DIR, 'static'),
 ]
-1
+
 # ManifestStaticFilesStorage is recommended in production, to prevent outdated
 # Javascript / CSS assets being served from cache (e.g. after a Wagtail upgrade).
 # See https://docs.djangoproject.com/en/2.2/ref/contrib/staticfiles/#manifeststaticfilesstorage
@@ -163,10 +163,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
-
+AWS_ACCESS_KEY_ID= os.getenv('BUCKETEER_AWS_ACCESS_KEY_ID')
+AWS_STORAGE_BUCKET_NAME= os.getenv('AWS_STORAGE_BUCKET_NAME')
 AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
-AWS_ACCESS_KEY_ID= os.getenv('CLOUDCUBE_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY= os.getenv('CLOUDCUBE_SECRET_ACCESS_KEY')
+AWS_SECRET_ACCESS_KEY= os.getenv('AWS_SECRET_ACCESS_KEY')
+
 AWS_S3_CUSTOM_DOMAIN= os.getenv('AWS_S3_CUSTOM_DOMAIN')
 
 # Wagtail settings
