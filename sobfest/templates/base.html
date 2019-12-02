@@ -55,12 +55,12 @@
         }
 
         .masthead h1.ui.header {
-            margin-top: .4em;
+            margin-top: 2em;
             margin-bottom: 0em;
-            font-size: 8em;
+            font-size: 5em;
             font-weight: bold;
             font-family: 'Kanit', sans-serif;
-            background: -webkit-linear-gradient(#eee, #993333);
+            background: -webkit-linear-gradient(#eee, #fff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: #FC0 1px 0 10px;
@@ -150,7 +150,7 @@
     </style>
 </head>
 
-<body id="root">
+<body id="root" class="pushable">
 <div class="ui large top fixed hidden menu">
     <div class="ui container">
 {#        <a class="active item">Home</a> <a class="item">Work</a>#}
@@ -186,7 +186,7 @@
             <h2>‘Championing Young People’</h2>
         </div>
     </div>
-    <div class="ui vertical stripe segment">
+    <div class="ui vertical stripe container">
             {% block content %}
             {% endblock content %}
     </div>
