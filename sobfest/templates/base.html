@@ -39,6 +39,7 @@
         .landing-image {
             background-image: url('./static/images/Wide.Edit.screen.JPG') !important;
             background-size: cover !important;
+            background-color: midnightblue;
         }
 
         .masthead.segment {
@@ -57,7 +58,7 @@
         .masthead h1.ui.header {
             margin-top: 2em;
             margin-bottom: 0em;
-            font-size: 5em;
+            font-size: 3em;
             font-weight: bold;
             font-family: 'Kanit', sans-serif;
             background: -webkit-linear-gradient(#eee, #fff);
@@ -84,7 +85,7 @@
         }
 
         .ui.vertical.stripe {
-            padding: 8em 0em;
+            padding: 2em 0em;
         }
 
         .ui.vertical.stripe h3 {
@@ -113,8 +114,8 @@
         }
 
         .quote.stripe.segment .grid .column {
-            padding-top: 5em;
-            padding-bottom: 5em;
+            padding-top: 1em;
+            padding-bottom: 1em;
         }
 
         .footer.segment {
@@ -159,19 +160,19 @@
 <body id="root" class="pushable">
 <div class="ui large top fixed hidden menu">
     <div class="ui container">
-{#        <a class="active item">Home</a> <a class="item">Work</a>#}
-{#        <a class="item">Company</a> <a class="item">Careers</a>#}
-{#        <div class="right menu">#}
-{#            <div class="item"><a class="ui button">Log in</a></div>#}
-{#            <div class="item"><a class="ui primary button">Sign Up</a></div>#}
-{#        </div>#}
+        {#        <a class="active item">Home</a> <a class="item">Work</a>#}
+        {#        <a class="item">Company</a> <a class="item">Careers</a>#}
+        {#        <div class="right menu">#}
+        {#            <div class="item"><a class="ui button">Log in</a></div>#}
+        {#            <div class="item"><a class="ui primary button">Sign Up</a></div>#}
+        {#        </div>#}
     </div>
 </div>
 <!--Sidebar Menu-->
 <div class="ui vertical inverted sidebar menu">
-{#    <a class="active item">Home</a> <a class="item">Work</a>#}
-{#    <a class="item">Company</a> <a class="item">Careers</a>#}
-{#    <a class="item">Login</a> <a class="item">Signup</a>#}
+    {#    <a class="active item">Home</a> <a class="item">Work</a>#}
+    {#    <a class="item">Company</a> <a class="item">Careers</a>#}
+    {#    <a class="item">Login</a> <a class="item">Signup</a>#}
 </div>
 <!--Page Contents-->
 <div class="pusher">
@@ -181,48 +182,55 @@
                 <a class="toc item"><i class="sidebar icon"></i></a>
                 {% main_menu max_levels=1 %}
                 <div class="right item">
-{#                    <a class="ui inverted button">Log in</a>#}
-{#                    <a class="ui inverted button">Sign Up</a>#}
-                {% flat_menu 'right' max_levels=1  %}
+                    {#                    <a class="ui inverted button">Log in</a>#}
+                    {#                    <a class="ui inverted button">Sign Up</a>#}
+                    {% flat_menu 'right' max_levels=1 %}
                 </div>
             </div>
         </div>
-        <div class="ui text container">
-            <h1 class="ui inverted header">UK Recovery Film Festival</h1>
-            <h2>‘Championing Young People’</h2>
+
+        <div class="ui stackable inverted divided equal height stackable grid">
+            <div class="six wide column">
+            </div>
+            <div class="ten wide column">
+                <div class="ui text container">
+                    <h1 class="ui inverted header">UK Recovery Film Festival</h1>
+                    <h2>‘Championing Young People’</h2>
+                </div>
+            </div>
         </div>
+
     </div>
     <div class="ui vertical stripe container">
-            {% block content %}
-            {% endblock content %}
+        {% block content %}
+        {% endblock content %}
     </div>
     <div class="ui hidden inverted vertical footer segment">
         <div class="ui container">
-            <div
-                    class="ui stackable inverted divided equal height stackable grid" >
+            <div class="ui stackable inverted divided equal height stackable grid">
                 <div class="three wide column">
-{#                    <h4 class="ui inverted header">About</h4>#}
+                    {#                    <h4 class="ui inverted header">About</h4>#}
                     <div class="ui inverted link list">
-{#                        <a class="item" href="#root">Sitemap</a>#}
-{#                        <a class="item" href="#root">Contact Us</a>#}
-{#                        <a class="item" href="#root"> Ceremonies</a>#}
-{#                        <a class="item" href="#root"> Plans</a>#}
+                        {#                        <a class="item" href="#root">Sitemap</a>#}
+                        {#                        <a class="item" href="#root">Contact Us</a>#}
+                        {#                        <a class="item" href="#root"> Ceremonies</a>#}
+                        {#                        <a class="item" href="#root"> Plans</a>#}
                     </div>
                 </div>
                 <div class="three wide column">
-{#                    <h4 class="ui inverted header">Services</h4>#}
+                    {#                    <h4 class="ui inverted header">Services</h4>#}
                     <div class="ui inverted link list">
-{#                        <a class="item" href="#root"> Pre-Order</a>#}
-{#                        <a class="item" href="#root">FAQ</a>#}
-{#                        <a class="item" href="#root">How To Access</a>#}
-{#                        <a class="item" href="#root">Favorites</a>#}
+                        {#                        <a class="item" href="#root"> Pre-Order</a>#}
+                        {#                        <a class="item" href="#root">FAQ</a>#}
+                        {#                        <a class="item" href="#root">How To Access</a>#}
+                        {#                        <a class="item" href="#root">Favorites</a>#}
                     </div>
                 </div>
                 <div class="seven wide column">
-{#                    <h4 class="ui inverted header">Footer Header</h4>#}
+                    {#                    <h4 class="ui inverted header">Footer Header</h4>#}
                     <p>
-{#                        Nunquam prensionem domina. Grandis, bi-color fidess etiam fallere de flavum, barbatus rector.#}
-{#                        cur domina ridetis. </p>#}
+                        {#                        Nunquam prensionem domina. Grandis, bi-color fidess etiam fallere de flavum, barbatus rector.#}
+                        {#                        cur domina ridetis. </p>#}
                 </div>
             </div>
         </div>

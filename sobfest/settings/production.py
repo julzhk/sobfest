@@ -28,4 +28,4 @@ ALLOWED_HOSTS = ['*']
 import django_heroku
 django_heroku.settings(locals())
 
-SECRET_KEY='3245678i76543567865'
+SECRET_KEY=os.getenv('SECRET_KEY', '2342342342525345243')
