@@ -152,22 +152,28 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_DIR, 'static'),
 ]
 
-# ManifestStaticFilesStorage is recommended in production, to prevent outdated
-# Javascript / CSS assets being served from cache (e.g. after a Wagtail upgrade).
-# See https://docs.djangoproject.com/en/2.2/ref/contrib/staticfiles/#manifeststaticfilesstorage
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-MEDIA_URL = '/media/'
-STATIC_URL = '/static/'
-AWS_ACCESS_KEY_ID= os.getenv('BUCKETEER_AWS_ACCESS_KEY_ID')
-AWS_STORAGE_BUCKET_NAME= os.getenv('AWS_STORAGE_BUCKET_NAME')
-AWS_SECRET_ACCESS_KEY= os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
 
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'sobfest.settings.storage_backends.MediaStorage'
+
+AWS_AUTO_CREATE_BUCKET = False
+MEDIA_URL = '/media/'
+AWS_ACCESS_KEY_ID= os.getenv('CLOUDCUBE_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY= os.getenv('CLOUDCUBE_SECRET_ACCESS_KEY')
 AWS_S3_CUSTOM_DOMAIN= os.getenv('AWS_S3_CUSTOM_DOMAIN')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_REGION_NAME=os.getenv('AWS_S3_REGION_NAME')
+AWS_LOCATION = os.getenv('AWS_LOCATION')
+AWS_FILE_PATH=f'{AWS_LOCATION}/public'
+STATIC_URL = AWS_S3_CUSTOM_DOMAIN
 
 # Wagtail settings
 
