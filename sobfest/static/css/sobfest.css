@@ -1,0 +1,123 @@
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-font-smoothing: grayscale;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .hidden.menu {
+            display: none;
+        }
+
+
+        .masthead.segment {
+            min-height: 60px;
+            padding: 1em 0em;
+        }
+
+        .masthead .logo.item img {
+            margin-right: 1em;
+        }
+
+        .masthead .ui.menu .ui.button {
+            margin-left: 0.5em;
+        }
+
+        .masthead h1.ui.header {
+            margin-top: 2em;
+            margin-bottom: 0em;
+            font-size: 3em;
+            font-weight: bold;
+            font-family: 'Kanit', sans-serif;
+            background: -webkit-linear-gradient(#eee, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: #FC0 1px 0 10px;
+        }
+
+        .ui.segment, .ui.vertical.segment {
+            border: none;
+            box-shadow: none;
+            border-bottom: none;
+        }
+
+
+        .masthead h2 {
+            font-size: 2em;
+            font-weight: bold;
+            background: -webkit-linear-gradient(#ccc, #eee);
+            -webkit-background-clip: text;
+            font-family: 'Kanit', sans-serif;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 1px 1px 1px #ddd, 0 0 0.2em #333;
+        }
+
+        .ui.vertical.stripe {
+            padding: 2em 0em;
+        }
+
+        .ui.vertical.stripe h3 {
+            font-size: 2em;
+        }
+
+        .ui.vertical.stripe .button + h3,
+        .ui.vertical.stripe p + h3 {
+            margin-top: 3em;
+        }
+
+        .ui.vertical.stripe .floated.image {
+            clear: both;
+        }
+
+        .ui.vertical.stripe p {
+            font-size: 1.33em;
+        }
+
+        .ui.vertical.stripe .horizontal.divider {
+            margin: 3em 0em;
+        }
+
+        .quote.stripe.segment {
+            padding: 0em;
+        }
+
+        .quote.stripe.segment .grid .column {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        .footer.segment {
+            padding: 5em 0em;
+        }
+
+        .secondary.pointing.menu .toc.item {
+            display: none;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .ui.fixed.menu {
+                display: none !important;
+            }
+
+            .secondary.pointing.menu .item,
+            .secondary.pointing.menu .menu {
+                display: none;
+            }
+
+            .secondary.pointing.menu .toc.item {
+                display: block;
+            }
+
+            .masthead.segment {
+                min-height: 350px;
+            }
+
+            .masthead h1.ui.header {
+                font-size: 2em;
+                margin-top: 1.5em;
+            }
+
+            .masthead h2 {
+                margin-top: 0.5em;
+                font-size: 1.5em;
+            }
+        }
