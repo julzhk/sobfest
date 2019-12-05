@@ -174,7 +174,7 @@ AWS_S3_REGION_NAME=os.getenv('AWS_S3_REGION_NAME')
 AWS_LOCATION = os.getenv('AWS_LOCATION')
 AWS_FILE_PATH=f'{AWS_LOCATION}/public'
 STATIC_URL = AWS_S3_CUSTOM_DOMAIN
-
+ADMIN_PATH = os.getenv('ADMIN_PATH', 'admin')
 # Wagtail settings
 
 WAGTAIL_SITE_NAME = "sobfest"
