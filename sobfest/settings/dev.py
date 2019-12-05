@@ -11,7 +11,7 @@ ALLOWED_HOSTS = ['*']
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-
+print('DEV ' * 8)
 try:
     from .local import *
 except ImportError:
