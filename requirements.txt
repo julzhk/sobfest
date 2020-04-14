@@ -38,7 +38,7 @@ tapioca-disqus==0.1.2
 tapioca-wrapper==0.5.3
 Unidecode==1.1.1
 urllib3==1.25.7
-wagtail==2.7
+wagtail==2.7.2
 wagtailmenus==3.0
 webencodings==0.5.1
 whitenoise==4.1.4
